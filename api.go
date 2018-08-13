@@ -28,7 +28,7 @@ func (s *Client) doRequest(req *http.Request) ([]byte, error) {
 
 func main() {
     fmt.Println("Starting the application...")
-    response, err := http.Get("https://crmconnection-a2be7e59b.dispatcher.hana.ondemand.com/ZUHD_INCIDENT_HANDLER_SRV/Incidents")
+    response, err := http.Get("")
     if err != nil {
         fmt.Printf("The HTTP request failed with error %s\n", err)
     } else {
@@ -37,7 +37,7 @@ func main() {
     }
     jsonData := map[string]string{"firstname": "Nic", "lastname": "Raboy"}
     jsonValue, _ := json.Marshal(jsonData)
-    response, err = http.Post("https://crmconnection-a2be7e59b.dispatcher.hana.ondemand.com/ZUHD_INCIDENT_HANDLER_SRV/Incidents('20026563')?$format=json", "application/json", bytes.NewBuffer(jsonValue))
+    response, err = http.Post("", "application/json", bytes.NewBuffer(jsonValue))
     if err != nil {
         fmt.Printf("The HTTP request failed with error %s\n", err)
     } else {
