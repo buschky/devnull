@@ -69,7 +69,18 @@ func (s *Client) doRequest(req *http.Request) ([]byte, error) {
 }
 
 func main() {
-    fmt.Println("Starting the application...")
+/*	
+type FamilyMember struct {
+    Name    string
+    Age     int
+    Parents []string
+}
+
+    var m FamilyMember
+    err := json.Unmarshal(b, &m)
+  */
+	
+  fmt.Println("Starting the application...")
     response, err := http.Get("")
     if err != nil {
         fmt.Printf("The HTTP request failed with error %s\n", err)
