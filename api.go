@@ -37,7 +37,7 @@ func main() {
     }
     jsonData := map[string]string{"firstname": "Nic", "lastname": "Raboy"}
     jsonValue, _ := json.Marshal(jsonData)
-    response, err = http.Post("", "application/json", bytes.NewBuffer(jsonValue))
+	response, err = http.Post("https://yourdomaingoeshere.com/crm", "application/json", bytes.NewBuffer(jsonValue))
     if err != nil {
         fmt.Printf("The HTTP request failed with error %s\n", err)
     } else {
