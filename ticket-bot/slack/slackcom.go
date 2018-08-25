@@ -1,4 +1,4 @@
-package main
+package ticketbot/slack
 
 import (
 	"fmt"
@@ -20,7 +20,7 @@ func main() {
 Loop:
 	for {
 		select {
-		    case msg := <-rtm.Incoming Events:
+		case msg := <-rtm.Incoming Events:
 			fmt.Print("Event Received: ")
 			switch ev := msg.Data.(type) {
 			case *slack.ConnectedEvent:
