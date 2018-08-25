@@ -1,4 +1,4 @@
-package main
+package ticketbot/slack
 
 import (
 	"fmt"
